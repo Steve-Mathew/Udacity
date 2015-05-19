@@ -1,0 +1,37 @@
+<head>
+	<title>The Basics of the Web and HTML: Getting Started with HTML</title>
+
+<h1>Getting Started with HTML</h1>
+
+<h2>World Wide Web</h2>
+The World Wide Web is a collection of HTML (HyperText Markup Language) files, most of which are accessible through "hyperlinks".  You can access word-processor files, music, and video files.  In its infancy, the "web", for short, is used to link countless pieces of information together, thus evoking a spider web, which is the source of its namesake.<br>
+Unfortunately, the potential is largely squandered; men use this resource primarily to view pornography (audio and video), while children - a term that can be applied to most adults - use it to download illegal files (audio, video, programs, and who-knows-what-else), and appropriate existing pictures of things that are not funny,  modify them to make them even less funny, then share them with the "rest of the world", which, for some odd reason, would find it really funny.  In the 1990s, these people were referred to as "losers".
+
+<h2>Components</h2>
+Here are the components that comprise the World Wide Web: The User, Terminal/Computer/Web-Browser, Internet, Communication Protocol (HTTP), Server.
+
+<h2>HTML</h2> 
+This is composed of content, followed by "markups", which are mostly "tags".
+Tags are generally shown by a command enclosed in less-than/greater-than signs, immediately before the content that you wish to mark up, and this is immediately followed by the same tag, except for a slash, signifying the end of markup.<br>
+They can modify text, such as "b", to make text bold, "em", to italicize text.<br>
+"href" provides a hyperlink reference to the marked-up text.  This is what allows hyperlinks to work.<br>
+"br" is a line break, while "p" is a paragraph, which is treated as a block of text.
+"img" loads graphic files from a given website.<br>
+A whole bunch of spaces put together will be treated as one space by the web browser.  This is commonly referred to as a "whitespace".  (What about the blackspace?!  Back when I was a kid, learning BASIC, it was colored text on a black background...Also, I grew up in the Bronx; when somebody refers to a "white-something", somebody else has to retort with "what about the black-something?".)<br>
+
+<h2>Computers and Stupidity</h2>
+Computers follow instructions explicitly given by the user.  If it's acting "stupid", the "behavior" is likely the user's fault.  (It just so happens that I have been asked "do you think like a computer?", or "are you a lawyer, by any chance", or "are you an engineer, by any chance?", possibly indicating that I have a comfortable understanding of computers...and that I think a little too much about semantics...)<br>
+So, forgetting to put closing tags, closing quotation marks, and not realizing that hitting "return" on your keyboard is not the same as a line-break tag can result in perceived "stupid" behavior, which is actually the result of human error.<br>
+
+<h2>Memorization</h2>
+If you forget how to do something, you can always look it up.  In my opinion, however, it is quite important to know how to do certain things automatically, but that will come with practice.  If you're going to do something that you haven't done in a long time, and can't remember because of this, the Internet is always available.
+
+<h2>Containers</h2>
+"span" and "div" are "containers", whatever the Hell that means...hopefully I'll find out soon...
+
+<h2>Structure</h2>
+This contains a heading, which generally consists of a "document type", a heading, a title, then the body, which contains the content that was discussed above.
+
+<h2>Stage 0</h2>
+<h4>Admittedly Off-Topic</h4>
+Look:  I understand that the deadline for Stage 0 was May 11.  It just so happens that I signed up on May 11...and I thought that Stage 0 implied signing up, meaning that I made it to the deadline.  (What else does "Stage 0" mean?  Who uses that phrase?)  I didn't know that Stage 0 was an assignment, until I saw it just now!  So please don't hold that against me!  I'm quite good with submitting deliverables in a timely manner!<br>
