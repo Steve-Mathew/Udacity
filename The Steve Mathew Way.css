@@ -3,6 +3,15 @@ html
 	font-family: "Book Antiqua";
 }
 
+.Table-of-Contents
+{
+	padding: 10px;
+	margin: 10px;
+	border-style: double;
+	border-color: black;	
+
+}
+
 .Part-1
 {
 	padding: 10px;
@@ -15,6 +24,14 @@ html
 {
 	padding: 10px;
 	margin: 10px;
-	border-style: groove;
+	border-style: solid;
 	border-color: #182dd1;	
+}
+
+.Part-3
+{
+	padding: 10px;
+	margin: 10px;
+	border-style: solid;
+	border-color: red;	
 }
