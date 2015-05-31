@@ -3,10 +3,35 @@ html
 	font-family: "Book Antiqua";
 }
 
-.Table-of-Contents
+.Section
 {
 	padding: 10px;
 	margin: 10px;
+}
+
+
+.Section-Title
+{
+	text-align: center;
+	font-size: xx-large;
+	font-weight: bold;
+}
+
+.Concept-Title
+{
+	text-align: center;
+	font-size: x-large;
+	font-style: italic;
+}
+
+p
+/* This pertains to concept descriptions. */
+{
+	text-align: justify;
+}
+
+.Table-of-Contents
+{
 	border-style: double;
 	border-color: black;	
 
@@ -14,24 +39,18 @@ html
 
 .Part-1
 {
-	padding: 10px;
-	margin: 10px;
 	border-style: solid;
 	border-color: #16D161;	
 }
 
 .Part-2
 {
-	padding: 10px;
-	margin: 10px;
 	border-style: solid;
 	border-color: #182dd1;	
 }
 
 .Part-3
 {
-	padding: 10px;
-	margin: 10px;
 	border-style: solid;
 	border-color: red;	
 }
