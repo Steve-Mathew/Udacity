@@ -6,9 +6,10 @@
 	<link rel="stylesheet" href="The%20Steve%20Mathew%20Way.css">
 </head>
 <body>
-	<h1><b><u>A Primer on the World Wide Web</u></b></h1>
+	<div class="Section-Title"><u>A Primer on the World Wide Web</u></div>
+	<div class="Section">
 	<div class="Table-of-Contents">
-		<h1>Table of Contents</h1>
+		<div class="Section-Title"> Table of Contents</div>
 		<ol>
 			<li><a href="#Part-1">Getting Started with HTML</a>
 			<ul>
@@ -32,17 +33,20 @@
 			</ul>
 		</ol>
 	</div>
+	</div>
+	<div class="Section">
 	<div class="Part-1">
-		<h1 id="Part-1">Part 1: Getting Started with HTML</h1>
-		<h2 id="Part-1a">World Wide Web</h2>
+		<div class="Section-Title" id="Part-1">Part 1: Getting Started with HTML</div>
+		<br>
+		<div class="Concept-Title" id="Part-1a">World Wide Web</div>
 		<p>
 			The World Wide Web is a collection of HTML (HyperText Markup Language) files, most of which are accessible through "hyperlinks".  You can access word-processor files, music, and video files.  In its infancy, the "web", for short, is used to link countless pieces of information together, thus evoking a spider web, which is the source of its namesake.
 		</p>
-		<h2 id="Part-1b">Components</h2>
+		<div class="Concept-Title" id="Part-1b">Components</div>
 		<p>
 			Here are the components that comprise the World Wide Web: The User, Terminal/Computer/Web-Browser, Internet, Communication Protocol (HTTP), Server.
 		</p>
-		<h2 id="Part-1c">HTML</h2>
+		<div class="Concept-Title" id="Part-1c">HTML</div>
 		<p>
 			This is composed of content, followed by "markups", which are mostly "tags".
 			Tags are generally shown by a command enclosed in less-than/greater-than signs, immediately before the content that you wish to mark up, and this is immediately followed by the same tag, except for a slash, signifying the end of markup.
@@ -54,52 +58,59 @@
 			"img" loads graphic files from a given website.<br>
 			A whole bunch of spaces put together will be treated as one space by the web browser.  This is commonly referred to as a "whitespace".
 		</p>
-		<h2 id="Part-1d">Computers and Stupidity</h2>
+		<div class="Concept-Title" id="Part-1d">Computers and Stupidity</div>
 		<p>
 			Computers follow instructions explicitly given by the user.  If it's acting "stupid", the "behavior" is likely the user's fault.  So, forgetting to put closing tags, closing quotation marks, and not realizing that hitting "return" on your keyboard is not the same as a line-break tag can result in perceived "stupid" behavior, which is actually the result of human error.
 		</p>
-		<h2 id="Part-1e">Memorization</h2>
+		<div class="Concept-Title" id="Part-1e">Memorization</div>
 		<p>
 			If you forget how to do something, you can always look it up.  In my opinion, however, it is quite important to know how to do certain things automatically, but that will come with practice.  If you're going to do something that you haven't done in a long time, and can't remember because of this, the Internet is always available.
 		</p>
 	</div>
-	<div class="Part-2">
-		<h1 id="Part-2">Part 2: HTML Structure</h1>
-		<h2 id="Part-2a">Structure</h2>
-		<p>
-			This contains a heading, which generally consists of a "document type", a heading, a title, then the body, which contains the content that was discussed above.
-		</p>
-		<p>
-			HTML structures, when shown visually, are analogous to trees.  This is because each element is visualized in a "box", that "branches" out to show other elements contained within, also visualized in "boxes".
-		</p>
-		<h2 id="Part-2b">Boxes and "<em>Boxifying</em>"</h2>
-		<p>
-			This is what developers use to show the complexity of each webpage.  The more "branches" of boxes you have, the more "nested" objects there are.
-		</p>
-		<h2 id="Part-2c">Containers</h2>
-		<p> 
-			"Span" and "Div" are containers, which are essentially bigger "boxes" that will have smaller "boxes" nested within.
-		</p>
 	</div>
+	<div class="Section">
+	<div class="Part-2">
+		<div class="Section-Title" id="Part-2">Part 2: HTML Structure</div>
+		<br>
+			<div class="Concept-Title" id="Part-2a">Structure</div>
+			<p>
+				This contains a heading, which generally consists of a "document type", a heading, a title, then the body, which contains the content that was discussed above.
+			</p>
+			<p>
+				HTML structures, when shown visually, are analogous to trees.  This is because each element is visualized in a "box", that "branches" out to show other elements contained within, also visualized in "boxes".
+			</p>
+			<div class="Concept-Title" id="Part-2b">Boxes and "<em>Boxifying</em>"</div>
+			<p>
+				This is what developers use to show the complexity of each webpage.  The more "branches" of boxes you have, the more "nested" objects there are.
+			</p>
+			<div class="Concept-Title" id="Part-2c">Containers</div>
+			<p> 
+				"Span" and "Div" are containers, which are essentially bigger "boxes" that will have smaller "boxes" nested within.
+			</p>
+	</div>
+	</div>
+	<div class="Section">
 	<div class="Part-3">
-		<h1 id="Part-3">CSS</h1>
-			<h2 id="Part-3a">Definition</h2>
+		<div  class="Section-Title" id="Part-3">CSS</div>
+		<br>
+			<div class="Concept-Title" id="Part-3a">Definition</div>
 			<p>
 				CSS stands for "Cascading Style Sheets".  A CSS would normally be its own file, which is referenced by a given HTML, and dictates the appearance of content in that HTML.  The term "cascading" is used, because the concept of "inheritance" is applied.
 			</p>
-			<h2 id="Part-3b">Inheritance</h2>
+			<div class="Concept-Title" id="Part-3b">Inheritance</div>
 			<p>
 				There's an "ancestor/descendant" aspect to "inheritance".  In real life, descendants (offspring, grandchildren, great-grandchildren, etc.) inherit certain traits from their parents, and those traits are carried over to subsequent generations.
 			</p>
 			<p>
 				In the context of CSS, "ancestor" properties apply to all "descendant" elements.  More importantly, it prevents programmers from having to type the same lines of code over and over again for the same elements.  The time saved can be used for working on other aspects of creating a webpage.  It provides consistency among the same types of elements.
 			</p>
-			<h2 id="Part-3c">Classes</h2>
+			<div class="Concept-Title" id="Part-3c">Classes</div>
 			<p>
 				"Classes" are groups of elements, such as a separate section of a webpage, or certain elements within each section of a webpage.
 			</p>
 			<p>
 				Classes contain properties, which are so numerous, that it would be best to just refer the reader to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">the CSS Reference section of the Mozilla Developer Network</a>.  These properties can dramatically alter the appearance of any given website.
 			</p>
+	</div>
 	</div>
 </body>
