@@ -1,0 +1,32 @@
+html
+{
+	font-family: "Book Antiqua";
+}
+
+.Main-Title
+{
+	text-align: center;
+	font-size: xx-large;
+	font-weight: bold;
+}
+
+.Concept
+{
+	border-style: solid;
+	border-color: black;
+	padding: 10px;
+	margin: 10px;
+}
+
+.Concept-Title
+{
+	text-align: center;
+	font-size: x-large;
+	font-style: italic;
+}
+
+p
+/* This pertains to concept descriptions. */
+{
+	text-align: justify;
+}
