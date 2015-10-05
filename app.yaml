@@ -1,0 +1,17 @@
+application: stage-4-project-sm
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /Stylesheets
+  static_dir: Stylesheets
+
+- url: /.*
+  script: Stage-4.app
+
+libraries:
+- name: jinja2
+  version: latest
+  
