@@ -54,11 +54,25 @@ class Databases(Handler):
     def get(self):
         self.render("Stage_4_Databases.html")
 
+#This is supposed to establish the database for user comments.
+class User(ndb.Model):
+    ID = ndb.StringProperty(indexed=True)
+    username = ndb.StringProperty(indexed=False)
+
+class Comment(ndb.Model):
+    user = ndb.StringProperty(User)
+    content = ndb.StringProperty(index=False)
+    date = ndb.DateTimeProperty(auto_now_add=True)
+
 #This is where users are supposed to be able to post comments, as well as view other people's comments...except I can't get this to work properly.
 class Commentary(Handler):
     def get(self):
         self.render("Stage_4_Commentary.html")
-#Should I insert commentary-oriented code here?
+
+    Comment.content = self.request.get('content')
+    Comment.put()
+    
+    all_comments = Comment.query()
 
 #This essentially creates addresses for all pages within this website.
 app = webapp2.WSGIApplication([('/', MainPage), ('/networks', Networks), ('/networks_and_html', Networks_and_HTML), ('/html_templates', HTMLTemplates), ('/databases', Databases), ('/commentary', Commentary)], debug=True)
