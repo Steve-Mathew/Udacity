@@ -1,0 +1,21 @@
+{% extends "Stage_4_Main_Template.html" %}
+
+{% block content %}
+
+	<div class="Commentary">
+		<div class="Section-Title" id="Commentary">Commentary</div>
+		<br>
+			<div class="Concept-Title" id="Part-2a">Your thoughts?</div>
+			<hr>
+				<form action="sign" method="post">
+					Name: <input name="Username"><br>
+					<div><textarea name="Comment" rows="3" cols="60"></textarea></div>
+					<div><input type="submit" value="Post your comment."></div>
+			  	</form>
+			<hr>
+			<i>Insert comments here...</i>
+			{% all_comments %}
+			<br>
+	</div>
+
+{% endblock %}
