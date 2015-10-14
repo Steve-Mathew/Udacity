@@ -1,0 +1,69 @@
+html
+{
+	font-family: "Book Antiqua";
+}
+
+.Section
+{
+	padding: 10px;
+	margin: 10px;
+}
+
+
+.Section-Title
+{
+	text-align: center;
+	font-size: xx-large;
+	font-weight: bold;
+}
+
+.Section-Subtitle
+{
+	text-align: center;
+	font-size: small;
+	font-weight: italic;
+}
+
+
+.Concept-Title
+{
+	text-align: center;
+	font-size: x-large;
+	font-style: italic;
+}
+
+p
+/* This pertains to concept descriptions. */
+{
+	text-align: justify;
+}
+
+.Commentary
+{
+	border-style: double;
+	border-color: black;	
+}
+
+.Part-1
+{
+	border-style: solid;
+	border-color: #16D161;	
+}
+
+.Part-2
+{
+	border-style: solid;
+	border-color: #182dd1;	
+}
+
+.Part-3
+{
+	border-style: solid;
+	border-color: red;	
+}
+
+.Part-4
+{
+	border-style: solid;
+	border-color: #c8d118;	
+}
