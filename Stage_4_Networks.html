@@ -1,0 +1,39 @@
+{% extends "Stage_4_Main_Template.html" %}
+
+{% block content %}
+
+	<div class="Part-1">
+		<div class="Section-Title">Networks</div>
+		<br>
+		<div class="Concept-Title">Definition</div>
+		<p>
+			A network is a group of entities that can communicate, even though they are not all directly connected.  Generally, a network consists of three or more such entities, and there must be a way to facilitate communication with entities that are not directly connected.
+		</p>
+		<div class="Concept-Title">Producing a Network</div>
+		<p>
+			To produce a network, there must be the following:
+			<ol>
+				<li>A way to encode and interpret messages.</li>
+				<li>A way to route messages.</li>
+				<li>Rules for determining which entities get access to network resources</li>
+			</ol>
+		</p>
+		<div class="Concept-Title">Latency</div>
+		<p>
+			The time required for a message to travel from a given source to its destination.  This is usually measured in seconds or milliseconds.
+		</p>
+		<div class="Concept-Title">Bandwidth</div>
+		<p>
+			The amount of information that can be transmitted in a given unit of time.  Generally measured in bits per seconds.
+		</p>
+		<div class="Concept-Title">Protocol</div>
+		<p>
+			A rule set that determines how two entities communicate with each other.  An example would be the Hypertext Transport Protocol that is used in the World Wide Web, with Get as an example of a message type.
+		</p>
+		<div class="Concept-Title">Server</div>
+		<p>
+			A computer (hardware) and/or computer program (software) that receives and fulfills requests made by other computers (clients).  A server may operate within a local area network (LAN), a wide area network (WAN), or it could operate across the Internet.
+		</p>
+	</div>
+
+{% endblock %}
