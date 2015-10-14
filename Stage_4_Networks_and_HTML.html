@@ -1,0 +1,42 @@
+{% extends "Stage_4_Main_Template.html" %}
+
+{% block content %}
+	<div class="Part-2">
+		<div class="Section-Title">Networks and HTML</div>
+		<br>
+			<div class="Concept-Title">URL</div>
+			<p>
+				Uniform Resource Locator, also known as the “web address”.
+			</p>
+			<div class="Concept-Title">Query</div>
+			<p>
+				In the context of the World Wide Web, a query is information sent to a server in addition to a URL.  Parameters are used for differentiation purposes:
+				<ul>
+					<li>? - Separates the URL from query parameters.</li>
+					<li>& - Separates query parameters from each other.</li>
+				</ul>
+			</p>
+			<div class="Concept-Title">Port</div>
+			<p>
+				A port directs a URL to a specific location on a given server.  If not shown, then the default port used is 80.
+			</p>
+			<div class="Concept-Title">Request Line</div>
+			<p>
+				This is a command that is sent from a given client to a given server.  A command is also known as a “method”.  Examples of methods include GET (requesting information from a server) and POST (update information from the user on a web page).
+			</p>
+			<div class="Concept-Title">Status Codes</div>
+			<p>
+				<ul>
+					<li>200-Level: Success.</li>
+					<li>300-Level: Success, but not in a straightforward manner.</li>
+					<li>400-Level: Client-side (user) error.</li>
+					<li>500-Level: Server-side error.</li>
+				</ul>
+			</p>
+			<div class="Concept-Title">Validation</div>
+			<p>
+				Assurance that data that a user provides is acceptable, either by being within an acceptable range, or by being correctly formatted.  This assures that errors will not occur, and that malicious users do not exploit a given website by introducing data that would cause havoc.  Validation can be server-side or client-side.
+			</p>
+	</div>
+
+{% endblock %}
