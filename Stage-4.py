@@ -60,19 +60,24 @@ class User(ndb.Model):
     username = ndb.StringProperty(indexed=False)
 
 class Comment(ndb.Model):
-    user = ndb.StringProperty(User)
-    content = ndb.StringProperty(index=False)
+    commenter = ndb.StructuredProperty(User)
+    content = ndb.StringProperty(indexed=False)
     date = ndb.DateTimeProperty(auto_now_add=True)
 
 #This is where users are supposed to be able to post comments, as well as view other people's comments...except I can't get this to work properly.
 class Commentary(Handler):
     def get(self):
-        self.render("Stage_4_Commentary.html")
+        #self.render("Stage_4_Commentary.html")
 
-    Comment.content = self.request.get('content')
-    Comment.put()
+        #Comment.content = self.request.get('content')
+        
+        #Let's try doing this manually...
+        user = User(username='Steverino')
+        sample_comment = Comment(commenter=user, content="Ron Paul 2012!")
+        sample_comment.put()
     
-    all_comments = Comment.query()
+        all_comments = User.query()
+        self.render("Stage_4_Commentary.html", Slurry = sample_comment.content)
 
 #This essentially creates addresses for all pages within this website.
 app = webapp2.WSGIApplication([('/', MainPage), ('/networks', Networks), ('/networks_and_html', Networks_and_HTML), ('/html_templates', HTMLTemplates), ('/databases', Databases), ('/commentary', Commentary)], debug=True)
