@@ -61,23 +61,29 @@ class User(ndb.Model):
 
 class Comment(ndb.Model):
     commenter = ndb.StructuredProperty(User)
+    #I want this to refer to the corresponding User instance.  Does this work?
     content = ndb.StringProperty(indexed=False)
     date = ndb.DateTimeProperty(auto_now_add=True)
 
 #This is where users are supposed to be able to post comments, as well as view other people's comments...except I can't get this to work properly.
 class Commentary(Handler):
     def get(self):
-        #self.render("Stage_4_Commentary.html")
-
-        #Comment.content = self.request.get('content')
+        sample_user = User()
+        sample_user.username = self.request.get('username')
+        user_comment = Comment()
+        user_comment.content = self.request.get('content')
+        sample_user.put()
+        user_comment.put()
+        #Is anything actually getting "put"?!
         
         #Let's try doing this manually...
-        user = User(username='Steverino')
-        sample_comment = Comment(commenter=user, content="Ron Paul 2012!")
-        sample_comment.put()
+        #user = User(username='Steverino')
+        #sample_comment = Comment(commenter=user, content="Ron Paul 2012!")
+        #sample_comment.put()
     
-        all_comments = User.query()
-        self.render("Stage_4_Commentary.html", Slurry = sample_comment.content)
+        all_comments = user_comment.query()
+        self.render("Stage_4_Commentary.html", sample_user = sample_user, user_comment = user_comment, all_comments = all_comments)
+        #Using the statement "sample_user = sample_user" is accepted, rather than just "sample_user"; the log will say "render() accepts exactly 2 arguments (5 given)" (for this scenario).  Is that how it's supposed to work?
 
 #This essentially creates addresses for all pages within this website.
 app = webapp2.WSGIApplication([('/', MainPage), ('/networks', Networks), ('/networks_and_html', Networks_and_HTML), ('/html_templates', HTMLTemplates), ('/databases', Databases), ('/commentary', Commentary)], debug=True)
