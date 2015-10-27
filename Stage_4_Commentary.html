@@ -8,16 +8,17 @@
 			<div class="Concept-Title" id="Part-2a">Your thoughts?</div>
 			<hr>
 				<form action="sign" method="post">
-					Name: <input name="Username"><br>
-					<div><textarea name="Comment" rows="3" cols="60"></textarea></div>
+					Name: <input name="username"><br>
+					<div><textarea name="content" rows="3" cols="60"></textarea></div>
 					<div><input type="submit" value="Post your comment."></div>
 			  	</form>
 			<hr>
 			<i>Insert comments here...</i>
 			<br>
-			<p><b>User ID: </b>{{ Slurry }}</p>
-			<p><b>Username: </b>{{ Slurry }}</p>
+			<p><b>User ID: </b>{{ sample_user.ID }}</p>
+			<p><b>Username: </b>{{ sample_user.username }}</p>
 
+			<p>{{ user_comment.content }}</p>
 			<p>{{ all_comments }}</p>
 	</div>
 
