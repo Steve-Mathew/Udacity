@@ -78,12 +78,12 @@ class Commentary(Handler):
         
         #Let's try doing this manually...
         #user = User(username='Steverino')
-        #sample_comment = Comment(commenter=user, content="Ron Paul 2012!")
+        #sample_comment = Comment(commenter=user, content="Can you see me?!")
         #sample_comment.put()
     
         all_comments = user_comment.query()
         self.render("Stage_4_Commentary.html", sample_user = sample_user, user_comment = user_comment, all_comments = all_comments)
-        #Using the statement "sample_user = sample_user" is accepted, rather than just "sample_user"; the log will say "render() accepts exactly 2 arguments (5 given)" (for this scenario).  Is that how it's supposed to work?
+        #Using the statement "sample_user = sample_user" is accepted, rather than just "sample_user"; the log will say "render() accepts exactly 2 arguments (5 given)" otherwise (for this scenario).  Is that how it's supposed to work?
 
 #This essentially creates addresses for all pages within this website.
 app = webapp2.WSGIApplication([('/', MainPage), ('/networks', Networks), ('/networks_and_html', Networks_and_HTML), ('/html_templates', HTMLTemplates), ('/databases', Databases), ('/commentary', Commentary)], debug=True)
