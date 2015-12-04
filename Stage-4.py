@@ -55,35 +55,30 @@ class Databases(Handler):
         self.render("Stage_4_Databases.html")
 
 #This is supposed to establish the database for user comments.
-class User(ndb.Model):
-    ID = ndb.StringProperty(indexed=True)
-    username = ndb.StringProperty(indexed=False)
-
 class Comment(ndb.Model):
-    commenter = ndb.StructuredProperty(User)
-    #I want this to refer to the corresponding User instance.  Does this work?
+    username = ndb.StringProperty(indexed=True)
     content = ndb.StringProperty(indexed=False)
     date = ndb.DateTimeProperty(auto_now_add=True)
+    key = ndb.key("Thoughts")
+
+user_comment = Comment()
 
 #This is where users are supposed to be able to post comments, as well as view other people's comments...except I can't get this to work properly.
 class Commentary(Handler):
     def get(self):
-        sample_user = User()
-        sample_user.username = self.request.get('username')
-        user_comment = Comment()
+        comments_query = Comment.query(key="Thoughts")#.order(-date)
+        self.render("Stage_4_Commentary.html", user_comment = user_comment, comments_query = comments_query)
+        
+class Commentary2(Handler):
+    def post(self):
+        user_comment.username = self.request.get('username')
         user_comment.content = self.request.get('content')
-        sample_user.put()
         user_comment.put()
         #Is anything actually getting "put"?!
         
-        #Let's try doing this manually...
-        #user = User(username='Steverino')
-        #sample_comment = Comment(commenter=user, content="Can you see me?!")
-        #sample_comment.put()
-    
-        all_comments = user_comment.query()
-        self.render("Stage_4_Commentary.html", sample_user = sample_user, user_comment = user_comment, all_comments = all_comments)
+        comments_query = Comment.query(key="Thoughts")#.order(-date)
+        self.render("Stage_4_Commentary.html", user_comment = user_comment, comments_query = comments_query)
         #Using the statement "sample_user = sample_user" is accepted, rather than just "sample_user"; the log will say "render() accepts exactly 2 arguments (5 given)" otherwise (for this scenario).  Is that how it's supposed to work?
 
 #This essentially creates addresses for all pages within this website.
-app = webapp2.WSGIApplication([('/', MainPage), ('/networks', Networks), ('/networks_and_html', Networks_and_HTML), ('/html_templates', HTMLTemplates), ('/databases', Databases), ('/commentary', Commentary)], debug=True)
+app = webapp2.WSGIApplication([('/', MainPage), ('/networks', Networks), ('/networks_and_html', Networks_and_HTML), ('/html_templates', HTMLTemplates), ('/databases', Databases), ('/commentary', Commentary), ('/sign', Commentary2)], debug=True)
