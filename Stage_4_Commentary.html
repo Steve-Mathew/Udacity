@@ -7,19 +7,25 @@
 		<br>
 			<div class="Concept-Title" id="Part-2a">Your thoughts?</div>
 			<hr>
-				<form action="sign" method="post">
+				<form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
 					Name: <input name="username"><br>
 					<div><textarea name="content" rows="3" cols="60"></textarea></div>
 					<div><input type="submit" value="Post your comment."></div>
 			  	</form>
 			<hr>
-			<i>Insert comments here...</i>
 			<br>
-			<p><b>User ID: </b>{{ sample_user.ID }}</p>
-			<p><b>Username: </b>{{ sample_user.username }}</p>
-
-			<p>{{ user_comment.content }}</p>
-			<p>{{ all_comments }}</p>
+		    {% for greeting in greetings %}
+		      {% if greeting.author %}
+		        <b>{{ greeting.author.email }}
+		          {% if user and user.user_id() == greeting.author.identity %}
+		            (You)
+		          {% endif %}
+		        </b> wrote:
+		      {% else %}
+		       An anonymous person wrote:
+		      {% endif %}
+		      <blockquote>{{ greeting.content }}</blockquote>
+		    {% endfor %}
 	</div>
 
 {% endblock %}
