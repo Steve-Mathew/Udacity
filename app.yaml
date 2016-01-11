@@ -1,4 +1,4 @@
-application: stage-5-project-sm
+application: stage-4-project-sm
 version: 1
 runtime: python27
 api_version: 1
@@ -9,8 +9,10 @@ handlers:
   static_dir: Stylesheets
 
 - url: /.*
-  script: Stage-5.app
+  script: Stage-4.app
 
 libraries:
+- name: webapp2
+  version: latest
 - name: jinja2
   version: latest
