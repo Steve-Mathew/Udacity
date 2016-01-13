@@ -15,16 +15,17 @@
 			<hr>
 			<br>
 		    {% for greeting in greetings %}
-		      {% if greeting.author %}
-		        <b>{{ greeting.author.email }}
-		          {% if user and user.user_id() == greeting.author.identity %}
-		            (You)
-		          {% endif %}
+		      {% if greeting.username %}
+		        <b>{{ greeting.username }}
 		        </b> wrote:
 		      {% else %}
 		       An anonymous person wrote:
 		      {% endif %}
 		      <blockquote>{{ greeting.content }}</blockquote>
+		      at {{ greeting.date }}.
+		      <br>
+		      <br>
+		      <br>
 		    {% endfor %}
 	</div>
 
